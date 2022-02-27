@@ -2,29 +2,93 @@
 <html>
 <head>
     <script src="./src/tp1opt.js"></script>
-    <link rel="stylesheet" href="./styles/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <div class = "container">
-        <div class = "header">
-            <h1>Seguro no pagamos!! Cooperativa</h1>
+    <section class="section">
+        <div class="container header">
+            <h1 class="title">Seguro no pagamos</h1>
+            <p class="subtitle">Cooperativa de seguros</p>
         </div>
-        <div class="main">
-            Nombre: <input type="text" id="nombre"><br>
-            Apellido: <input type="text" id="apellido"><br>
-            DNI: <input type="text" id="nombre"><br>
-            Email: <input type="text" id="apellido"><br>
-            Teléfono: <input type="text" id="nombre"><br>
-            Tipo de seguro: 
-                <select id="tipoSeguro" onchange="mostrarValor()">
-                    <option value="basico">Básico</option>
-                    <option value="intermedio">Intermedio</option>
-                    <option value="premium">Premium</option>
-                </select>
-                <span style="font-weight: bold;" id="precioSeguro"></span>
-                <br>
-        </div>
-    </div>
+    </section>
+    <section class = "section">
+        <div class = "container">
+            <form id="fomulario">
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Juan" id="nombre">
+                    </div>
+                </div>
+              
+                <div class="field">
+                    <label class="label">Apellido</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Perez" id="apellido">
+                    </div>
+                </div>
 
+                <div class="field">
+                    <label class="label">DNI</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="11111111" id="dni">
+                    </div>
+                </div>
+              
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="email" placeholder="juan.perez@gmail.com">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Teléfono</label>
+                    <div class="control has-icons-left">
+                        <input class="input" type="text" placeholder="+541155555555" id="telefono">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-phone"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <nav class="level">
+                    <div class="level-left">
+                        <div class="level-item"> 
+                            <div class="field">
+                                <label class="label">Tipo de seguro</label>
+                                <div class="control">
+                                    <div class="select">
+                                        <select id="tipoSeguro" onchange="mostrarValor()">
+                                            <option value="basico">Básico</option>
+                                            <option value="intermedio">Intermedio</option>
+                                            <option value="premium">Premium</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>    
+                            
+                        <div class="level-item">   
+                                <p class="title" style="margin-bottom:0px" id="precioSeguro"></p>
+                        </div>       
+                    </div>
+                </nav>
+                
+                <div class="field is-grouped">
+                    <div class="control">
+                        <button class="button is-link">Enviar</button>
+                    </div>
+                    <div class="control">
+                        <button class="button is-link is-light">Cancelar</button>
+                    </div>
+            </form>  
+        </div>
+    </section>
 </body>
 </html>
