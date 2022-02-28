@@ -8,13 +8,13 @@
 </head>
 <body>
     <section class="section">
-        <div class="container header">
+        <div class="header">
             <h1 class="title">Seguro no pagamos</h1>
-            <p class="subtitle">Cooperativa de seguros</p>
+            <h2 class="subtitle">Cooperativa de seguros</h2>
         </div>
     </section>
-    <section class = "section">
-        <div class = "container">
+    <section class = "section columns">
+        <div class = "column is-5 is-offset-0">
             <form id="fomulario">
                 <div class="field">
                     <label class="label">Nombre</label>
@@ -64,7 +64,8 @@
                                 <label class="label">Tipo de seguro</label>
                                 <div class="control">
                                     <div class="select">
-                                        <select id="tipoSeguro" onchange="mostrarValor()">
+                                        <select id="tipoSeguro" onchange="mostrarValor()" autocomplete="off">
+                                            <option value="" selected="selected" disabled hidden>Seleccione</option>
                                             <option value="basico">Básico</option>
                                             <option value="intermedio">Intermedio</option>
                                             <option value="premium">Premium</option>
@@ -74,8 +75,8 @@
                             </div>
                         </div>    
                             
-                        <div class="level-item">   
-                                <p class="title" style="margin-bottom:0px" id="precioSeguro"></p>
+                        <div class="level-item is-align-self-flex-end">   
+                                <p class="title " id="precioSeguro"></p>
                         </div>       
                     </div>
                 </nav>
